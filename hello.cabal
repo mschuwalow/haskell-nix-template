@@ -1,0 +1,30 @@
+-- Instructions on how to write this file are in the Cabal
+-- documentation, which can be found here:
+--   http://haskell.org/cabal/release/cabal-latest/doc/users-guide/
+
+name: hello
+version: 1.0.0.0
+license: Apache-2.0
+license-file: LICENSE
+author: Maxim Schuwalow
+maintainer: Maxim Schuwalow <maxim.schuwalow@gmail.com>
+bug-reports: mailto:maxim.schuwalow@gmail.com
+stability: stable
+homepage: http://github.com/mschuwalow/haskell-nix-template/
+synopsis: Hello World, an example package
+category: Console, Text
+cabal-version: >= 1.8
+build-type: Simple
+
+Description:
+  This is an implementation of the classic "Hello World" program in
+  Haskell, as an example of how to create a minimal Haskell
+  application using Cabal and Hackage.  Please submit any suggestions and
+  improvements.
+
+executable hello
+  hs-source-dirs: src
+  main-is: hello.hs
+  build-depends:
+    base >= 4.2 && < 5,
+    transformers
