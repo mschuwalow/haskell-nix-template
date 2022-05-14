@@ -25,14 +25,14 @@
                 nixpkgs-fmt
               ];
               # This adds `js-unknown-ghcjs-cabal` to the shell.
-              # shell.crossPlatforms = p: [p.ghcjs];
+              # shell.crossPlatforms = ps: [ps.ghcjs];
             };
         })
       ];
       pkgs = import nixpkgs { inherit system overlays; inherit (haskellNix) config; };
       flake = pkgs.helloProject.flake {
-        # This adds support for `nix build .#js-unknown-ghcjs-cabal:hello:exe:hello`
-        # crossPlatforms = p: [p.ghcjs];
+        # This adds support for `nix build .#js-unknown-ghcjs:hello:exe:hello`
+        # crossPlatforms = ps: [ps.ghcjs];
       };
     in flake // {
       # Built by `nix build .`

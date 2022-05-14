@@ -26,5 +26,4 @@ executable hello
   hs-source-dirs: src
   main-is: hello.hs
   build-depends:
-    base >= 4.2 && < 5,
-    transformers
+    base >= 4.2 && < 5
